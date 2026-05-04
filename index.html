@@ -3,32 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dirt Merchant</title>
+  <title>Dirt Merchant Enterprises</title>
 
   <style>
     body {
       margin: 0;
-      background: black;
+      overflow: hidden;
+      background-color: #e2dbce;
     }
 
     .container {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100vw;
       height: 100vh;
-      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
     }
 
     img {
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      background-color: #e2dbce;
+    }
+
+    /* Button */
+    .landing-email-button {
+      position: fixed;
+      top: 70%;
+      left: 38%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+
+      color: #3d3100;
+      background-color: #e2dbce;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .landing-email-button:hover {
+      background-color: #3d3100;
+      color: #e2dbce;
+      transform: translate(-50%, -50%) scale(1.15);
+      border: 3px solid #e2dbce;
+    }
+
+    @media (max-width: 600px) {
+      .landing-email-button {
+        top: 88%;
+        font-size: 1.35rem;
+        padding: 8px 8px;
+        white-space: nowrap;
+        background-color: #3d3100;
+        color: #e2dbce;
+      }
+
+      .landing-email-button:hover {
+        background-color: #e2dbce;
+        color: #3d3100;
+      }
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
-    <img src="hat square black bars.png" alt="Landing Image">
+    <img src="landing-page-1.png" alt="Landing Image">
   </div>
+
+  <a class="landing-email-button" href="mailto:zander@dirtmerchantenterprises.com">
+    Contact
+  </a>
+
 </body>
 </html>
